@@ -6,9 +6,11 @@ public class primeInRange {
         int N=sc.nextInt();
         for(int i=1;i<=N;i++){
             if(isPrime(i)){
-                System.out.println(i);
+                System.out.print(i+" ");
             }
+            
         }
+        System.out.println();
     }
     static boolean isPrime(int n){
         if(n<2) return false;
