@@ -1,4 +1,4 @@
-package PEP;
+// package PEP;
 import java.util.Scanner;
 public class digitsSummation {
     public static void main(String[] args) {
