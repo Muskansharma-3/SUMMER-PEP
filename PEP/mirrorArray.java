@@ -11,6 +11,11 @@ public class mirrorArray {
                 arr[i][j]=sc.nextLong();
             }
         }
-        
+        for(int i=0;i<N;i++){
+            for(int j=M-1;j>=0;j--){
+                System.out.print(arr[i][j]+" ");
+            }
+            System.out.println();
+        }
     }
 }
