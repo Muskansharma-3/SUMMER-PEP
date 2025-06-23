@@ -18,14 +18,28 @@ public class numberOfEqual {
         int count=0;
         while(i<n && j<m){
             if(a[i]==b[j]){
-                count++;
+                int c1=1;
+                int c2=1;
                 i++;
+                while(i<n && a[i]==a[i-1]){
+                    c1++;
+                    i++;
+                }
                 j++;
+                while(j<m && b[j]==b[j-1]){
+                    c2++;
+                    j++;
+                }
+                count+=(c1*c2);
+                
+            }else if(a[i]<b[j]){
+                i++;
+                while(i<n && a[i]<b[j]) i++;
             }else{
                 j++;
+                while(j<m && a[i]>b[j]) j++;
             }
         }
         System.out.println(count);
-
     }
 }
