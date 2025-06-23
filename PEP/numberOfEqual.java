@@ -13,6 +13,19 @@ public class numberOfEqual {
         for(int i=0;i<m;i++){
             b[i]=sc.nextLong();
         }
-        
+        int i=0;
+        int j=0;
+        int count=0;
+        while(i<n && j<m){
+            if(a[i]==b[j]){
+                count++;
+                i++;
+                j++;
+            }else{
+                j++;
+            }
+        }
+        System.out.println(count);
+
     }
 }
