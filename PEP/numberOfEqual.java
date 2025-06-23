@@ -15,7 +15,7 @@ public class numberOfEqual {
         }
         int i=0;
         int j=0;
-        int count=0;
+        long count=0;
         while(i<n && j<m){
             if(a[i]==b[j]){
                 int c1=1;
@@ -31,7 +31,7 @@ public class numberOfEqual {
                     j++;
                 }
                 count+=(c1*c2);
-                
+
             }else if(a[i]<b[j]){
                 i++;
                 while(i<n && a[i]<b[j]) i++;
