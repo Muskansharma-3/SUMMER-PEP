@@ -18,8 +18,8 @@ public class numberOfEqual {
         long count=0;
         while(i<n && j<m){
             if(a[i]==b[j]){
-                int c1=1;
-                int c2=1;
+                long c1=1;
+                long c2=1;
                 i++;
                 while(i<n && a[i]==a[i-1]){
                     c1++;
