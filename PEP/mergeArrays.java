@@ -14,18 +14,18 @@ public class mergeArrays {
             b[i]=sc.nextLong();
         }
         long[] res=new long[n+m];
-        int i=n-1;
-        int j=m-1;
-        int k=m+n-1;
-        while(j>=0 && i>=0){
-            if(a[i]>b[j]){
-                res[k--]=a[i--];
+        int i=0;
+        int j=0;
+        int k=0;
+        while(i<n && j<m){
+            if(a[i]<=b[j]){
+                res[k++]=a[i++];
             }else{
-                res[k--]=b[j--];
+                res[k++]=b[j++];
             }
         }
-        while(i>=0) res[k--]=a[i--];
-        while(j>=0) res[k--]=b[j--];
+        while(i<n) res[k++]=a[i++];
+        while(j<m) res[k++]=b[j++];
         for(long num:res){
             System.out.print(num+" ");
         }
