@@ -1,14 +1,12 @@
 import java.util.*;
-import java.io.*;
 
 public class distinctNumbers {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        int n=Integer.parseInt(br.readLine());
-        String[] input=br.readLine().split(" ");
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
         long[] a=new long[n];
         for(int i=0;i<n;i++){
-            a[i]=Long.parseLong(input[i]);
+            a[i]=sc.nextLong();
         }
         Arrays.sort(a);
         int i=1;
