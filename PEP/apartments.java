@@ -16,7 +16,8 @@ public class apartments {
         }
         Arrays.sort(a);
         Arrays.sort(b);
-        int count=0, i=0, j=0;
+        long count=0; 
+        int i=0, j=0;
         while(i<n && j<m){
             if(a[i]-k<=b[j] && a[i]+k>=b[j]){
                 count++;
