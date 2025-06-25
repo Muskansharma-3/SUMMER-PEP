@@ -20,6 +20,10 @@ public class segmentwithBigSum {
                 i++;
             }
         }
-        
+        if(min==Integer.MAX_VALUE) {
+            System.out.println(-1);
+        } else {
+            System.out.println(min);
+        }   
     }
 }
