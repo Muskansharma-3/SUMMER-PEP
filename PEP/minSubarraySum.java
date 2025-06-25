@@ -12,7 +12,7 @@ public class minSubarraySum {
         for(long num:a){
             sum+=num;
             min=Math.min(min, sum);
-            if(sum > 0) sum = 0;
+            if(sum>0) sum=0;
         }
         System.out.println(min);
     }
