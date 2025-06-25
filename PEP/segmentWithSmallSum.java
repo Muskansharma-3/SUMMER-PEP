@@ -13,8 +13,13 @@ public class segmentWithSmallSum {
         int i=0;
         long max=Integer.MIN_VALUE;
         for(int j=0;j<n;j++){
-            
+            sum+=a[j];
+            while(sum>s && i<=j){
+                sum-=a[i];
+                i++;
+            }  
+            max=Math.max(max, j-i+1);
         }
-        
+        System.out.println(max);
     }
 }
