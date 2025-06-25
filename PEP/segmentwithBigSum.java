@@ -9,6 +9,17 @@ public class segmentwithBigSum {
         for(int i=0;i<n;i++){
             a[i]=sc.nextLong();
         }
+        long sum=0;
+        long min=Integer.MAX_VALUE;
+        int i=0;
+        for(int j=0;j<n;j++){
+            sum+=a[j];
+            while(sum>=s){
+                if(j-i+1<min) min=j-i+1;
+                sum-=a[i];
+                i++;
+            }
+        }
         
     }
 }
