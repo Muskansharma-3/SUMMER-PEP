@@ -15,7 +15,7 @@ public class rangeSumquery {
             prefix[i]=prefix[i-1]+arr[i];
         }
         while(Q-- > 0){
-            int L=sc.nextInt();
+            int L =sc.nextInt();
             int R=sc.nextInt();
             System.out.println(prefix[R] - prefix[L - 1]);      
         }
