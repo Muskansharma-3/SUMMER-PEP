@@ -13,6 +13,7 @@ public class closestToTheLeft {
         for(int i=0;i<k;i++){
             que[i]=sc.nextLong();
         }
-        
+          
+
     }
 }
