@@ -10,8 +10,8 @@ public class packingRectangles {
         long high=Math.max(w, h);
         long ans=0;
         while(low<high){
-
-        }
-        
+            
+        }  
+        System.out.println(ans);
     }
 }
