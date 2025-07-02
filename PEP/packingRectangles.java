@@ -6,8 +6,8 @@ public class packingRectangles {
         long w=sc.nextLong();
         long h=sc.nextLong();
         long n=sc.nextLong();
-        long low=0;
-        long high=Math.max(w, h)*n;
+        long low=1;
+        long high=n*n;
         while(low<high){
             long mid=low+(high-low)/2;
             if((mid/w)*(mid/h)>=n){
