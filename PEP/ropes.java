@@ -9,6 +9,5 @@ public class ropes {
             arr[i]=sc.nextInt();
         }
         
-
     }
 }
