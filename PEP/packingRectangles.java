@@ -16,6 +16,6 @@ public class packingRectangles {
                 low=mid+1;
             }
         }  
-        System.out.println(low+1);
+        System.out.println(low);
     }
 }
