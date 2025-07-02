@@ -7,11 +7,15 @@ public class packingRectangles {
         long h=sc.nextLong();
         long n=sc.nextLong();
         long low=0;
-        long high=Math.max(w, h);
-        long ans=0;
+        long high=Math.max(w, h)*n;
         while(low<high){
-            
+            long mid=low+(high-low)/2;
+            if((mid/w)*(mid/h)>=n){
+                high=mid;
+            }else{
+                low=mid+1;
+            }
         }  
-        System.out.println(ans);
+        System.out.println(low);
     }
 }
