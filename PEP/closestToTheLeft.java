@@ -9,11 +9,28 @@ public class closestToTheLeft {
         for(int i=0;i<n;i++){
             arr[i]=sc.nextLong();
         }
-        long[] que=new long[k];
-        for(int i=0;i<k;i++){
-            que[i]=sc.nextLong();
+        for(int q=0;q<k;q++){
+            long x=sc.nextLong();
+            int left=0;
+            int right=n-1;
+            int ans=-1;
+            while(left<=right) {
+                int mid=(left+right)/2;
+                if(arr[mid]<=x){
+                    ans=mid;
+                    left=mid+1;
+                }else{
+                    right=mid-1;
+                }
+            }
+            if(ans==-1){
+                System.out.println(0);
+            }else{
+                System.out.println(ans+1);
+            }
+        }
         }
           
 
     }
-}
+
