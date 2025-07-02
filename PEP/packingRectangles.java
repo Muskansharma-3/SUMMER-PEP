@@ -8,14 +8,16 @@ public class packingRectangles {
         long n=sc.nextLong();
         long low=1;
         long high=n*n;
+        long ans=0;
         while(low<high){
             long mid=low+(high-low)/2;
             if((mid/w)*(mid/h)>=n){
-                high=mid;
+                ans=mid;
+                high=mid-1;
             }else{
                 low=mid+1;
             }
         }  
-        System.out.println(low);
+        System.out.println(ans);
     }
 }
