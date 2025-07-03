@@ -8,7 +8,13 @@ public class brackets {
         Stack<Character> stack=new Stack<>();
         for(char ch:s.toCharArray()){
             if(ch=='(') stack.push(ch);
-            else stack.pop();
+            else if(ch==')'){
+                if(stack.isEmpty()){
+                    System.out.println(false);
+                    return;
+                }
+                stack.pop();
+            }
         }
         if(stack.isEmpty()){
             System.out.println(true);
