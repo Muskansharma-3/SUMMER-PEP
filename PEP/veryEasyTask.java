@@ -20,9 +20,9 @@ public class veryEasyTask {
                 ans=mid;
                 high=mid-1;
             } else {
-                low = mid + 1;
+                low=mid+1;
             }
         }
-        System.out.println(ans + first);
+        System.out.println(ans+first);
     }
 }
