@@ -9,14 +9,20 @@ public class lotteryByTheSea {
         for(int i=0;i<n;i++){
             arr[i]=sc.nextInt();
         }
+        int i=0;
         int sum=0;
         int max=0;
-        for(int i=0;i<n;i++){
-            sum+=arr[i];
-            max=Math.max(max, sum);
-            if(sum<0) sum=0;
-            
+        for(int j=0;j<n;j++){
+            sum+=arr[j];
+            while(sum>m){
+                sum-=arr[i];
+                i++;
+            }
+            if(sum>max){
+                max=sum;
+            }
         }
+
         System.out.println(max);
     }
 }
