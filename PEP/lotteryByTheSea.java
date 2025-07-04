@@ -13,11 +13,9 @@ public class lotteryByTheSea {
         int max=0;
         for(int i=0;i<n;i++){
             sum+=arr[i];
-            
-            if(sum>m){
-                sum=0;
-            }
             max=Math.max(max, sum);
+            if(sum<0) sum=0;
+            
         }
         System.out.println(max);
     }
