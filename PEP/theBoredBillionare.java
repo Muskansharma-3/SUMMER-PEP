@@ -6,6 +6,7 @@ public class theBoredBillionare {
         int T=sc.nextInt();
         while(T-->0){
             long N=sc.nextLong();
+            int i=0;
             
             
         }
