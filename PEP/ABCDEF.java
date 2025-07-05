@@ -27,9 +27,15 @@ public class ABCDEF {
             }
         }
         Map<Integer, Integer> map=new HashMap<>();
-        for(int num:map){
-            map.put(num, map.getOrDefault(num,0)+1);
+        for(int val:rhs){
+            map.put(val, map.getOrDefault(val,0)+1);
         }
-
+        long total=0;
+        for(int val:lhs){
+            if(map.containsKey(val)){
+                total+=map.get(val);
+            }
+        }
+        System.out.println(total);
     }
 }
