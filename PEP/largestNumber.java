@@ -21,7 +21,13 @@ public class largestNumber{
             }
         });
         if(brr[0].equals("0")){
-            return "0";
+            System.out.println("0");
+            return;
         }
+        StringBuilder res=new StringBuilder();
+        for(String s:brr){
+            res.append(s);
+        }
+        System.out.println(res.toString());
     }
 }
