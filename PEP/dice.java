@@ -6,10 +6,10 @@ public class dice {
         int n=sc.nextInt();
         System.out.println(print(n));
     }
-    private static int print(int n){
+    private static long print(int n){
         if(n==0) return 1;
         if(n<0) return 0;
-        int ans=0;
+        long ans=0;
         for(int i=1;i<=6;i++){
             ans+=print(n-i);
         }
