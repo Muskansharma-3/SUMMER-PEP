@@ -11,6 +11,14 @@ public class maxPathSum {
                 arr[i][j]=sc.nextInt();
             }
         }
-        
+        int res=find(arr, 0,0,n,m);
+        System.out.println(res);
+    }
+    private static int find(int[][] arr, int i, int j, int n, int m){
+        if(i>=n || j>=m) return Integer.MIN_VALUE;
+        if(i==n-1 && j==m-1) return arr[i][j];
+        int a=find(arr,i,j+1,n,m);
+        int b=find(arr, i+1,j,n,m);
+        return arr[i][j]+Math.max(a,b);
     }
 }
