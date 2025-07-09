@@ -6,8 +6,9 @@ public class factorial2 {
         int n=sc.nextInt();
         System.out.println(factorial(n));
     }
-    private static int factorial(int n){
+    private static long factorial(int n){
         if(n==0 || n==1) return 1;
-        return n*factorial(n-1);
+        long res=n*factorial(n-1);
+        return res;
     }
 }
