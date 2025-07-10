@@ -8,6 +8,11 @@ public class summation {
         for(int i=0; i<n;i++){
             arr[i]=sc.nextLong();
         }
-        
+        System.out.println(find(arr, n));
+
+    }
+    private static long find(long[] arr, int n){
+        if(n==0) return 0;
+        return arr[n-1]+find(arr,n-1);
     }
 }
