@@ -10,7 +10,9 @@ public class bonusExp {
             arr[i]=sc.nextLong();
         }
         dp=new int[n][2];
-        Arrays.fill(dp,-1);
+        for(int i=0;i<n;i++){
+            Arrays.fill(dp[i],-1);
+        }
         System.out.println(find(arr,0,n, 0));
     }
     private static int find(long[] arr, int i, int n, int count){
