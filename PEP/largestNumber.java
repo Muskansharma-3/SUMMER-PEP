@@ -20,7 +20,7 @@ public class largestNumber{
 
             }
         });
-        if(brr[0].equals("0")){
+        if(brr[0].equals("")){
             System.out.println("0");
             return;
         }
