@@ -5,29 +5,27 @@ public class stonePaperScissors {
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
         String s=sc.nextLine();
-        int rock = 0, scissors = 0, paper = 0;
+        int r=0, sci=0, p=0;
 
-        for (char c : S.toCharArray()) {
-            int prevRock = rock, prevScissors = scissors, prevPaper = paper;
+        for (char c:s.toCharArray()){
+            int prevr=r, prevs=sci, prevp=p;
+            r=Math.max(prevs, prevp);
+            sci=Math.max(prevr,prevp);
+            p= Math.max(prevr, prevs);
 
-            // Update all based on previous state (not repeating the last move)
-            rock = Math.max(prevScissors, prevPaper);
-            scissors = Math.max(prevRock, prevPaper);
-            paper = Math.max(prevRock, prevScissors);
-
-            if (c == 'R') {
-                scissors = 0;
-                paper++;
-            } else if (c == 'S') {
-                paper = 0;
-                rock++;
-            } else if (c == 'P') {
-                rock = 0;
-                scissors++;
+            if (c=='R'){
+                sci=0;
+                p++;
+            } else if(c=='S'){
+                p=0;
+                r++;
+            } else if(c=='P'){
+                r=0;
+                sci++;
             }
         }
 
-        int result = Math.max(rock, Math.max(scissors, paper));
+        int result=Math.max(r,Math.max(sci,p));
         System.out.println(result);
     }
 }
