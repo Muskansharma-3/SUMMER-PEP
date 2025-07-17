@@ -18,4 +18,13 @@ public class adjacencyList {
         list.get(i).add(j);
         list.get(j).add(i);
     }
+    private static void display(List<List<Integer>> list){
+        for(int i=0;i<list.size();i++){
+            System.out.print(i+": ");
+            for(int j:list.get(i)){
+                System.out.print(j+" ");
+            }
+            System.out.println();
+        }
+    }
 }
